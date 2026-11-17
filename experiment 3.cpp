@@ -13,7 +13,7 @@ public:
  data[1][0] = c; 
  data[1][1] = d; 
  } 
- // Operator + 
+
  Matrix operator+(const Matrix &m) 
  { 
  Matrix result; 
@@ -22,7 +22,7 @@ public:
  result.data[i][j] = data[i][j] + m.data[i][j]; 
  return result; 
  } 
- // Operator * 
+  
  Matrix operator*(const Matrix &m) 
  { 
  Matrix result; 
@@ -37,12 +37,12 @@ public:
  } 
  return result; 
  } 
- // Operator [] 
+  
  int* operator[](int index) 
  { 
  return data[index]; 
  } 
- // Operator << 
+  
  friend ostream& operator<<(ostream &out, const Matrix &m) 
  { 
  for (int i = 0; i < 2; i++) 
@@ -60,7 +60,7 @@ int main()
  Matrix B(5, 6, 7, 8);  
  Matrix sum = A + B; 
  Matrix product = A * B; 
- // Unit Tests 
+  
  assert(sum[0][0] == 6); 
  assert(sum[1][1] == 12); 
  assert(product[0][0] == 19); 
