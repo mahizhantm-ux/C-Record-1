@@ -52,7 +52,7 @@ public:
 int main()
 {
  const int N = 10000;
- // Custom Stack Benchmark
+ 
  auto start = high_resolution_clock::now();
  MyStack<int> myStack;
  for (int i = 0; i < N; i++)
@@ -62,7 +62,7 @@ int main()
  auto end = high_resolution_clock::now();
  auto customStackTime = 
  duration_cast<microseconds>(end - start);
- // STL Stack Benchmark
+ 
  start = high_resolution_clock::now();
  stack<int> stlStack;
  for (int i = 0; i < N; i++)
@@ -72,7 +72,7 @@ int main()
  end = high_resolution_clock::now();
  auto stlStackTime =
  duration_cast<microseconds>(end - start);
- // Custom Queue Benchmark
+ 
  start = high_resolution_clock::now();
  MyQueue<int> myQueue;
  for (int i = 0; i < N; i++)
@@ -82,7 +82,7 @@ int main()
  end = high_resolution_clock::now();
  auto customQueueTime =
  duration_cast<microseconds>(end - start);
- // STL Queue Benchmark
+ 
  start = high_resolution_clock::now();
  queue<int> stlQueue;
  for (int i = 0; i < N; i++)
