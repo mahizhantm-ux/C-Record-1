@@ -3,7 +3,7 @@ using namespace std;
 class Shape 
 { 
 public: 
- virtual float area() = 0; // Pure virtual function 
+ virtual float area() = 0; 
 }; 
 class Circle : public Shape 
 { 
