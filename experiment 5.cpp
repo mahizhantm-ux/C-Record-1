@@ -18,13 +18,13 @@ int main()
  {"Kumar", 91, ' '},
  {"Ravi", 65, ' '}
  };
- // Sort students based on marks
+ 
  sort(students.begin(), students.end(),
  [](Student a, Student b)
  {
  return a.mark > b.mark;
  });
- // Assign grades using transform
+ 
  transform(students.begin(), students.end(),
  students.begin(),
  [](Student s)
@@ -39,20 +39,20 @@ int main()
  s.grade = 'F';
  return s;
  });
- // Find first student scoring above 80
+ 
  auto it = find_if(students.begin(), students.end(),
  [](Student s)
  {
  return s.mark > 80;
  });
- // Calculate total marks using accumulate
+ 
  int total = accumulate(students.begin(), students.end(), 0,
  [](int sum, Student s)
  {
  return sum + s.mark;
  });
  float average = (float)total / students.size();
- // Display results
+ 
  cout << "Student GradeAnalyzer\n"; 
  cout << "---------------------\n";
  cout << "Name\tMark\tGrade\n";
